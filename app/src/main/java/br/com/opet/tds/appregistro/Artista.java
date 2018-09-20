@@ -4,7 +4,7 @@ package br.com.opet.tds.appregistro;
  * Created by Diego on 19/09/2018.
  */
 
-public class Artista {
+public class Artista implements Comparable<Artista>{
     private String nome;
     private String genero;
 
@@ -29,5 +29,15 @@ public class Artista {
 
     public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    @Override
+    public int compareTo(Artista artista) {
+        if(this.getGenero().compareTo(artista.getGenero()) < 0){
+            return -1;
+        }else if(this.getGenero().compareTo(artista.getGenero()) > 0){
+            return 1;
+        }
+        return 0;
     }
 }

@@ -10,6 +10,7 @@ import android.widget.ListView;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class MainActivity extends Activity {
@@ -49,6 +50,7 @@ public class MainActivity extends Activity {
         a.setGenero(genero);
 
         artistas.add(a);
+        Collections.sort(artistas);
         atualizarArtistas();
     }
 }
